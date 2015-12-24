@@ -1,14 +1,37 @@
-// License: eh, not sure yet.  Free to use for all noncommercial purposes.  If you modify it a little, don't claim it as your own.
-// cirthix@gmail.com
-// VERSION 0.9
+/*
+ * Overclock, a simple library for adjusting OSCCAL on atmega168 and similar
+ * 
+ * Copyright (C) 2015 cirthix@gmail.com
+ * 
+ * This file is part of Overclock.
+ * 
+ * This software is free software: you can redistribute it and/or modify it under the terms of the
+ * GNU General Public License as published by the Free Software Foundation, either version 3 of the
+ * License, or (at your option) any later version.  In addition to or superseding this license, this
+ * software may not be used in any form which is not completely free without the author's written 
+ * consent.
+ * 
+ * 
+ * This software is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
+ * without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ * 
+ * See the GNU General Public License for more details. You should have received a copy of the GNU
+ * General Public License along with This software. If not, see <http://www.gnu.org/licenses/>.
+ * 
+ * Authors: cirthix@gmail.com
+ */
+ 
+ 
 // VERY IMPORTANT NOTE: THIS LIBRARY RELIES ON THE WATCHDOG INTERRUPT SERVICE REQUEST.  THE WDT_ISR MUST CONTAIN THE FOLLOWING:
 //
 //		ISR(WDT_vect) {
 //			my_Overclock_object.WatchdogFired();
 //			// Add your other watchdog code here.
 //		}
-//	This lib will also zero-out the timer1 configuration.  Because you should call this as one of the first lines in setup(), this is OK.
-// TODO: add support for clock frequency dividers for underclocking
+//	This lib will also zero-out the timer1 configuration.
+//	It will also stop the watchdog timer after using it.
+//	Because you should call this as one of the first lines in setup()(or before), this is OK.
+// TODO: add support for clock frequency dividers for underclocking (currently 	OSCCAL=0x01 yields ~5MHz minimum, depending on chip)
 
 #ifndef OVERCLOCK_h
 #define OVERCLOCK_h
