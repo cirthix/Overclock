@@ -1,4 +1,26 @@
 /*
+ * Overclock, a simple library for adjusting OSCCAL on atmega168 and similar
+ * 
+ * Copyright (C) 2015 cirthix@gmail.com
+ * 
+ * This file is part of Overclock.
+ * 
+ * This software is free software: you can redistribute it and/or modify it under the terms of the
+ * GNU General Public License as published by the Free Software Foundation, either version 3 of the
+ * License, or (at your option) any later version.  In addition to or superseding this license, this
+ * software may not be used in any form which is not completely free without the author's written 
+ * consent.
+ * 
+ * This software is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
+ * without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ * 
+ * See the GNU General Public License for more details. You should have received a copy of the GNU
+ * General Public License along with This software. If not, see <http://www.gnu.org/licenses/>.
+ * 
+ * Authors: cirthix@gmail.com
+ */
+
+/*
  This is the example project for demonstrating operation of the Overclock library.
 Made by cirthix (cirthix@gmail.com)
 Please see https://github.com/cirthix/Overclock for more information.
@@ -24,7 +46,6 @@ OC Clock: 15625272
 #include "Overclock.h"
 
 const uint32_t SERIAL_BAUD = 115200 ;  // Recommend 38400, 19200, or 9600 for better stability.  115200 works for me, but may be less stable in some setups.
-
 
 Overclock my_Overclock_object=Overclock((uint32_t)16000000, (uint32_t)SERIAL_BAUD);
 //Overclock my_Overclock_object=Overclock((uint32_t)F_CPU);
