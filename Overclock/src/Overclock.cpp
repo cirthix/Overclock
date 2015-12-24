@@ -1,5 +1,25 @@
-// SEE Overclock.h FOR INFO
-// VERSION 0.9
+/*
+ * Overclock, a simple library for adjusting OSCCAL on atmega168 and similar
+ * 
+ * Copyright (C) 2015 cirthix@gmail.com
+ * 
+ * This file is part of Overclock.
+ * 
+ * This software is free software: you can redistribute it and/or modify it under the terms of the
+ * GNU General Public License as published by the Free Software Foundation, either version 3 of the
+ * License, or (at your option) any later version.  In addition to or superseding this license, this
+ * software may not be used in any form which is not completely free without the author's written 
+ * consent.
+ * 
+ * This software is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
+ * without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ * 
+ * See the GNU General Public License for more details. You should have received a copy of the GNU
+ * General Public License along with This software. If not, see <http://www.gnu.org/licenses/>.
+ * 
+ * Authors: cirthix@gmail.com
+ */
+ 
 #include <Overclock.h>
 
 
